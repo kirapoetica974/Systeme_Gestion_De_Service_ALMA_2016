@@ -1,0 +1,13 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERVICE = {}) & NOM: FIN(INTEGER) & not(NOM = {}) & PROFIL: FIN(INTEGER) & not(PROFIL = {}) & ((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {}) & ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {});
+PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {})
+END
+&
+THEORY EnumerateX IS
+ETAT == {actif,inactif};
+TYPESERVICE == {exclusif,nonExclusif}
+END

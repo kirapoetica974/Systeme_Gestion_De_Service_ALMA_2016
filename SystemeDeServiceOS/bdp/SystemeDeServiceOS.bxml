@@ -1,0 +1,72 @@
+<Machine name='SystemeDeServiceOS' type='abstraction'>
+<Sets>
+<Set>
+<Id value='PROCESSUS' typref='3569248008'/>
+</Set>
+<Set>
+<Id value='SERVICE' typref='2113264464'/>
+</Set>
+<Set>
+<Id value='NOM' typref='2466216583'/>
+</Set>
+<Set>
+<Id value='PROFIL' typref='2063181425'/>
+</Set>
+<Set>
+<Id value='ETAT' typref='2539719319'/>
+<Enumerated_Values>
+<Id value='actif' typref='678717378'/>
+<Id value='inactif' typref='678717378'/>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='TYPESERVICE' typref='2200518486'/>
+<Enumerated_Values>
+<Id value='exclusif' typref='2423830893'/>
+<Id value='nonExclusif' typref='2423830893'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='3569248008'>
+<Unary_Exp op='POW'>
+<Id value='PROCESSUS'/>
+</Unary_Exp>
+</Type>
+<Type id='2113264464'>
+<Unary_Exp op='POW'>
+<Id value='SERVICE'/>
+</Unary_Exp>
+</Type>
+<Type id='2466216583'>
+<Unary_Exp op='POW'>
+<Id value='NOM'/>
+</Unary_Exp>
+</Type>
+<Type id='2063181425'>
+<Unary_Exp op='POW'>
+<Id value='PROFIL'/>
+</Unary_Exp>
+</Type>
+<Type id='2539719319'>
+<Unary_Exp op='POW'>
+<Id value='ETAT'/>
+</Unary_Exp>
+</Type>
+<Type id='678717378'>
+<Id value='ETAT'/>
+</Type>
+<Type id='2200518486'>
+<Unary_Exp op='POW'>
+<Id value='TYPESERVICE'/>
+</Unary_Exp>
+</Type>
+<Type id='2423830893'>
+<Id value='TYPESERVICE'/>
+</Type>
+</TypeInfos>
+
+</Machine>

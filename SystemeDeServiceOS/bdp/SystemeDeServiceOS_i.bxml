@@ -1,0 +1,43 @@
+<Machine name='SystemeDeServiceOS_i' type='implementation'>
+<Abstraction>SystemeDeServiceOS</Abstraction>
+<Values>
+<Valuation ident='SERVICE' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='50' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+<Valuation ident='NOM' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='30' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+<Valuation ident='PROFIL' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='30' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+<Valuation ident='PROCESSUS' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='30' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+</Values>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>
