@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(SystemeDeServiceFonctions))==(btrue);
   Abstract_List_Invariant(Machine(SystemeDeServiceFonctions))==(btrue);
   Context_List_Invariant(Machine(SystemeDeServiceFonctions))==(btrue);
-  List_Invariant(Machine(SystemeDeServiceFonctions))==(processus <: PROCESSUS & service <: SERVICE & nom <: NOM & profil <: PROFIL & serviceUtilise: processus <-> service & leNom: service +-> nom & leProfil: service +-> profil & leProfilAutorise: service <-> profil & lEtat: service +-> ETAT & leTypeDeService: service +-> TYPESERVICE & serviceSouscrit: processus <-> service)
+  List_Invariant(Machine(SystemeDeServiceFonctions))==(processus <: 0..maxProc & service <: 0..maxServ & nom <: 0..maxNom & profil <: 0..maxProfil & serviceUtilise: processus <-> service & leNom: service +-> nom & leProfil: processus +-> profil & leProfilAutorise: service <-> profil & lEtat: service +-> ETAT & leTypeDeService: service +-> TYPESERVICE & serviceSouscrit: processus <-> service)
 END
 &
 THEORY ListAssertionsX IS
@@ -120,8 +120,8 @@ END
 THEORY ListSetsX IS
   Set_Definition(Machine(SystemeDeServiceFonctions),TYPESERVICE)==({exclusif,nonExclusif});
   Context_List_Enumerated(Machine(SystemeDeServiceFonctions))==(ETAT,TYPESERVICE);
-  Context_List_Defered(Machine(SystemeDeServiceFonctions))==(PROCESSUS,SERVICE,NOM,PROFIL);
-  Context_List_Sets(Machine(SystemeDeServiceFonctions))==(PROCESSUS,SERVICE,NOM,PROFIL,ETAT,TYPESERVICE);
+  Context_List_Defered(Machine(SystemeDeServiceFonctions))==(?);
+  Context_List_Sets(Machine(SystemeDeServiceFonctions))==(ETAT,TYPESERVICE);
   List_Valuable_Sets(Machine(SystemeDeServiceFonctions))==(?);
   Inherited_List_Enumerated(Machine(SystemeDeServiceFonctions))==(?);
   Inherited_List_Defered(Machine(SystemeDeServiceFonctions))==(?);
@@ -141,7 +141,7 @@ END
 &
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(SystemeDeServiceFonctions))==(btrue);
-  Context_List_Properties(Machine(SystemeDeServiceFonctions))==(PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERVICE = {}) & NOM: FIN(INTEGER) & not(NOM = {}) & PROFIL: FIN(INTEGER) & not(PROFIL = {}) & ETAT: FIN(INTEGER) & not(ETAT = {}) & TYPESERVICE: FIN(INTEGER) & not(TYPESERVICE = {}));
+  Context_List_Properties(Machine(SystemeDeServiceFonctions))==(maxProc: 0..MAXINT & maxServ: 0..MAXINT & maxNom: 0..MAXINT & maxProfil: 0..MAXINT & ETAT: FIN(INTEGER) & not(ETAT = {}) & TYPESERVICE: FIN(INTEGER) & not(TYPESERVICE = {}));
   Inherited_List_Properties(Machine(SystemeDeServiceFonctions))==(btrue);
   List_Properties(Machine(SystemeDeServiceFonctions))==(btrue)
 END
@@ -165,15 +165,15 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Machine(SystemeDeServiceFonctions)) == (?);
   List_Of_VisibleVar_Ids(Machine(SystemeDeServiceFonctions)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(SystemeDeServiceFonctions)) == (?: ?);
-  List_Of_Ids(Machine(SystemeDeServiceOS)) == (PROCESSUS,SERVICE,NOM,PROFIL,ETAT,TYPESERVICE,actif,inactif,exclusif,nonExclusif | ? | ? | ? | ? | ? | ? | ? | SystemeDeServiceOS);
+  List_Of_Ids(Machine(SystemeDeServiceOS)) == (maxProc,maxServ,maxNom,maxProfil,ETAT,TYPESERVICE,actif,inactif,exclusif,nonExclusif | ? | ? | ? | ? | ? | ? | ? | SystemeDeServiceOS);
   List_Of_HiddenCst_Ids(Machine(SystemeDeServiceOS)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(SystemeDeServiceOS)) == (?);
+  List_Of_VisibleCst_Ids(Machine(SystemeDeServiceOS)) == (maxProc,maxServ,maxNom,maxProfil);
   List_Of_VisibleVar_Ids(Machine(SystemeDeServiceOS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(SystemeDeServiceOS)) == (?: ?)
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(SystemeDeServiceFonctions)) == (Type(serviceSouscrit) == Mvl(SetOf(atype(PROCESSUS,?,?)*atype(SERVICE,?,?)));Type(leTypeDeService) == Mvl(SetOf(atype(SERVICE,?,?)*etype(TYPESERVICE,?,?)));Type(lEtat) == Mvl(SetOf(atype(SERVICE,?,?)*etype(ETAT,?,?)));Type(leProfilAutorise) == Mvl(SetOf(atype(SERVICE,?,?)*atype(PROFIL,?,?)));Type(leProfil) == Mvl(SetOf(atype(SERVICE,?,?)*atype(PROFIL,?,?)));Type(leNom) == Mvl(SetOf(atype(SERVICE,?,?)*atype(NOM,?,?)));Type(serviceUtilise) == Mvl(SetOf(atype(PROCESSUS,?,?)*atype(SERVICE,?,?)));Type(profil) == Mvl(SetOf(atype(PROFIL,?,?)));Type(nom) == Mvl(SetOf(atype(NOM,?,?)));Type(service) == Mvl(SetOf(atype(SERVICE,?,?)));Type(processus) == Mvl(SetOf(atype(PROCESSUS,?,?))))
+  Variables(Machine(SystemeDeServiceFonctions)) == (Type(serviceSouscrit) == Mvl(SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)));Type(leTypeDeService) == Mvl(SetOf(btype(INTEGER,?,?)*etype(TYPESERVICE,?,?)));Type(lEtat) == Mvl(SetOf(btype(INTEGER,?,?)*etype(ETAT,?,?)));Type(leProfilAutorise) == Mvl(SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)));Type(leProfil) == Mvl(SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)));Type(leNom) == Mvl(SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)));Type(serviceUtilise) == Mvl(SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)));Type(profil) == Mvl(SetOf(btype(INTEGER,?,?)));Type(nom) == Mvl(SetOf(btype(INTEGER,?,?)));Type(service) == Mvl(SetOf(btype(INTEGER,?,?)));Type(processus) == Mvl(SetOf(btype(INTEGER,?,?))))
 END
 &
 THEORY TCIntRdX IS

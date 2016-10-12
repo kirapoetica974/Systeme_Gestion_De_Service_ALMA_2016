@@ -19,98 +19,128 @@
 </Define>
 <Define name="ctx">
 <Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:1:1" typref="3569248008" value="PROCESSUS"/>
-</Set>
-<Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:2:1" typref="2113264464" value="SERVICE"/>
-</Set>
-<Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:3:1" typref="2466216583" value="NOM"/>
-</Set>
-<Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:4:1" typref="2063181425" value="PROFIL"/>
-</Set>
-<Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:5:1" typref="2539719319" value="ETAT"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:1:1" typref="2539719319" value="ETAT"/>
 <Enumerated_Values>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:5:2:1" typref="678717378" value="actif"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:5:2:2" typref="678717378" value="inactif"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:1:2:1" typref="678717378" value="actif"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:1:2:2" typref="678717378" value="inactif"/>
 </Enumerated_Values>
 </Set>
 <Set>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:6:1" typref="2200518486" value="TYPESERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:2:1" typref="2200518486" value="TYPESERVICE"/>
 <Enumerated_Values>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:6:2:1" typref="2423830893" value="exclusif"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:6:2:2" typref="2423830893" value="nonExclusif"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:2:2:1" typref="2423830893" value="exclusif"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:1:2:2:2" typref="2423830893" value="nonExclusif"/>
 </Enumerated_Values>
 </Set>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:1:1" typref="2701647786" value="maxProc"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:1:2:2" typref="2701647786" value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:2:1" typref="2701647786" value="maxServ"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:2:2:2" typref="2701647786" value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:3:1" typref="2701647786" value="maxNom"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:3:2:2" typref="2701647786" value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:4:1" typref="2701647786" value="maxProfil"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:4:2:2" typref="2701647786" value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
 </Define>
 <Define name="seext"/>
 <Define name="inv">
 <Nary_Pred op="&amp;">
-<Exp_Comparison op="&lt;:" initialTag="processus : POW( PROCESSUS)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2" typref="3569248008" value="PROCESSUS"/>
+<Exp_Comparison op="&lt;:" initialTag="processus : POW( ((0) .. (maxProc)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3603043417" value="processus"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:2" typref="2701647786" value="maxProc"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="service : POW( SERVICE)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2" typref="2113264464" value="SERVICE"/>
+<Exp_Comparison op="&lt;:" initialTag="service : POW( ((0) .. (maxServ)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="3603043417" value="service"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:2" typref="2701647786" value="maxServ"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="nom : POW( NOM)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="2466216583" value="nom"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2" typref="2466216583" value="NOM"/>
+<Exp_Comparison op="&lt;:" initialTag="nom : POW( ((0) .. (maxNom)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="3603043417" value="nom"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:2" typref="2701647786" value="maxNom"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="profil : POW( PROFIL)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="2063181425" value="profil"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2" typref="2063181425" value="PROFIL"/>
+<Exp_Comparison op="&lt;:" initialTag="profil : POW( ((0) .. (maxProfil)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="3603043417" value="profil"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:2" typref="2701647786" value="maxProfil"/>
+</Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((serviceUtilise) : (((processus) &lt;-&gt; (service))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="4031867510" value="serviceUtilise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1903705485">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="103245008" value="serviceUtilise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="3603043417" value="service"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leNom) : (((service) +-&gt; (nom))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="395964917" value="leNom"/>
-<Binary_Exp op="+-&gt;" typref="1977414222">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="2466216583" value="nom"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="103245008" value="leNom"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="3603043417" value="nom"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((leProfil) : (((service) +-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="3576112639" value="leProfil"/>
-<Binary_Exp op="+-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="2063181425" value="profil"/>
+<Exp_Comparison op=":" initialTag="((leProfil) : (((processus) +-&gt; (profil))))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="103245008" value="leProfil"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leProfilAutorise) : (((service) &lt;-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="3576112639" value="leProfilAutorise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="2063181425" value="profil"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="103245008" value="leProfilAutorise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((lEtat) : (((service) +-&gt; (ETAT))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="2854939941" value="lEtat"/>
-<Binary_Exp op="+-&gt;" typref="1744519028">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="1165311580" value="lEtat"/>
+<Binary_Exp op="+-&gt;" typref="3789537533">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:2" typref="2539719319" value="ETAT"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leTypeDeService) : (((service) +-&gt; (TYPESERVICE))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="1804948036" value="leTypeDeService"/>
-<Binary_Exp op="+-&gt;" typref="3606595775">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="332788045" value="leTypeDeService"/>
+<Binary_Exp op="+-&gt;" typref="2602411766">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:2" typref="2200518486" value="TYPESERVICE"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((serviceSouscrit) : (((processus) &lt;-&gt; (service))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:1" typref="4031867510" value="serviceSouscrit"/>
-<Binary_Exp op="&lt;-&gt;" typref="1903705485">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:2" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:1" typref="103245008" value="serviceSouscrit"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:2" typref="3603043417" value="service"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -137,7 +167,7 @@
 <Nary_Sub op="||">
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:1:1:1" typref="3569248008" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:1:1:1" typref="3603043417" value="processus"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:1:2:1" typref="3817003670"/>
@@ -145,7 +175,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:2:1:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:2:1:1" typref="3603043417" value="service"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:2:2:1" typref="3817003670"/>
@@ -153,7 +183,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:3:1:1" typref="2466216583" value="nom"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:3:1:1" typref="3603043417" value="nom"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:3:2:1" typref="3817003670"/>
@@ -161,7 +191,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:4:1:1" typref="2063181425" value="profil"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:4:1:1" typref="3603043417" value="profil"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:4:2:1" typref="3817003670"/>
@@ -169,7 +199,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:5:1:1" typref="4031867510" value="serviceUtilise"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:5:1:1" typref="103245008" value="serviceUtilise"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:5:2:1" typref="3817003670"/>
@@ -177,7 +207,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:6:1:1" typref="395964917" value="leNom"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:6:1:1" typref="103245008" value="leNom"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:6:2:1" typref="3817003670"/>
@@ -185,7 +215,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:7:1:1" typref="3576112639" value="leProfil"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:7:1:1" typref="103245008" value="leProfil"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:7:2:1" typref="3817003670"/>
@@ -193,7 +223,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:8:1:1" typref="3576112639" value="leProfilAutorise"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:8:1:1" typref="103245008" value="leProfilAutorise"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:8:2:1" typref="3817003670"/>
@@ -201,7 +231,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:9:1:1" typref="2854939941" value="lEtat"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:9:1:1" typref="1165311580" value="lEtat"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:9:2:1" typref="3817003670"/>
@@ -209,7 +239,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:10:1:1" typref="1804948036" value="leTypeDeService"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:10:1:1" typref="332788045" value="leTypeDeService"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:10:2:1" typref="3817003670"/>
@@ -217,7 +247,7 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:11:1:1" typref="4031867510" value="serviceSouscrit"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:11:1:1" typref="103245008" value="serviceSouscrit"/>
 </Variables>
 <Values>
 <EmptySet tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:4:1:11:2:1" typref="3817003670"/>
@@ -230,69 +260,81 @@
 <Tag goalTag="Invariant is preserved">
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
-<Exp_Comparison op="&lt;:" initialTag="processus : POW( PROCESSUS)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2" typref="3569248008" value="PROCESSUS"/>
+<Exp_Comparison op="&lt;:" initialTag="processus : POW( ((0) .. (maxProc)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3603043417" value="processus"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:2" typref="2701647786" value="maxProc"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="service : POW( SERVICE)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2" typref="2113264464" value="SERVICE"/>
+<Exp_Comparison op="&lt;:" initialTag="service : POW( ((0) .. (maxServ)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="3603043417" value="service"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:2" typref="2701647786" value="maxServ"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="nom : POW( NOM)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="2466216583" value="nom"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2" typref="2466216583" value="NOM"/>
+<Exp_Comparison op="&lt;:" initialTag="nom : POW( ((0) .. (maxNom)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="3603043417" value="nom"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:2" typref="2701647786" value="maxNom"/>
+</Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="&lt;:" initialTag="profil : POW( PROFIL)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="2063181425" value="profil"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2" typref="2063181425" value="PROFIL"/>
+<Exp_Comparison op="&lt;:" initialTag="profil : POW( ((0) .. (maxProfil)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="3603043417" value="profil"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:2" typref="2701647786" value="maxProfil"/>
+</Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((serviceUtilise) : (((processus) &lt;-&gt; (service))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="4031867510" value="serviceUtilise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1903705485">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="103245008" value="serviceUtilise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="3603043417" value="service"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leNom) : (((service) +-&gt; (nom))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="395964917" value="leNom"/>
-<Binary_Exp op="+-&gt;" typref="1977414222">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="2466216583" value="nom"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="103245008" value="leNom"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="3603043417" value="nom"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((leProfil) : (((service) +-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="3576112639" value="leProfil"/>
-<Binary_Exp op="+-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="2063181425" value="profil"/>
+<Exp_Comparison op=":" initialTag="((leProfil) : (((processus) +-&gt; (profil))))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="103245008" value="leProfil"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leProfilAutorise) : (((service) &lt;-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="3576112639" value="leProfilAutorise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="2063181425" value="profil"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="103245008" value="leProfilAutorise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((lEtat) : (((service) +-&gt; (ETAT))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="2854939941" value="lEtat"/>
-<Binary_Exp op="+-&gt;" typref="1744519028">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="1165311580" value="lEtat"/>
+<Binary_Exp op="+-&gt;" typref="3789537533">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:2" typref="2539719319" value="ETAT"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((leTypeDeService) : (((service) +-&gt; (TYPESERVICE))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="1804948036" value="leTypeDeService"/>
-<Binary_Exp op="+-&gt;" typref="3606595775">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="332788045" value="leTypeDeService"/>
+<Binary_Exp op="+-&gt;" typref="2602411766">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:2" typref="2200518486" value="TYPESERVICE"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((serviceSouscrit) : (((processus) &lt;-&gt; (service))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:1" typref="4031867510" value="serviceSouscrit"/>
-<Binary_Exp op="&lt;-&gt;" typref="1903705485">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:2" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:1" typref="103245008" value="serviceSouscrit"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:11:2:2" typref="3603043417" value="service"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -337,42 +379,66 @@
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
-<Binary_Pred op="=&gt;">
-<Exp_Comparison op="&lt;:" initialTag="processus : POW( PROCESSUS)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2" typref="3569248008" value="PROCESSUS"/>
-</Exp_Comparison>
-<Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 </Binary_Pred>
+</Binary_Pred>
 <Binary_Pred op="=&gt;">
-<Exp_Comparison op="&lt;:" initialTag="service : POW( SERVICE)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2" typref="2113264464" value="SERVICE"/>
+<Exp_Comparison op="&lt;:" initialTag="processus : POW( ((0) .. (maxProc)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:1" typref="3603043417" value="processus"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:1:2:2" typref="2701647786" value="maxProc"/>
+</Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
-<Binary_Pred op="=&gt;">
-<Exp_Comparison op="&lt;:" initialTag="nom : POW( NOM)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="2466216583" value="nom"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2" typref="2466216583" value="NOM"/>
-</Exp_Comparison>
-<Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 </Binary_Pred>
+</Binary_Pred>
 <Binary_Pred op="=&gt;">
-<Exp_Comparison op="&lt;:" initialTag="profil : POW( PROFIL)">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="2063181425" value="profil"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2" typref="2063181425" value="PROFIL"/>
+<Exp_Comparison op="&lt;:" initialTag="service : POW( ((0) .. (maxServ)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:1" typref="3603043417" value="service"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:2:2:2" typref="2701647786" value="maxServ"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:" initialTag="nom : POW( ((0) .. (maxNom)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:1" typref="3603043417" value="nom"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:3:2:2" typref="2701647786" value="maxNom"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op="&lt;:" initialTag="profil : POW( ((0) .. (maxProfil)))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:1" typref="3603043417" value="profil"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:1" typref="2701647786" value="0"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:4:2:2" typref="2701647786" value="maxProfil"/>
+</Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -384,10 +450,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((serviceUtilise) : (((processus) &lt;-&gt; (service))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="4031867510" value="serviceUtilise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1903705485">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3569248008" value="processus"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:1" typref="103245008" value="serviceUtilise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:5:2:2" typref="3603043417" value="service"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -400,10 +466,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((leNom) : (((service) +-&gt; (nom))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="395964917" value="leNom"/>
-<Binary_Exp op="+-&gt;" typref="1977414222">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="2466216583" value="nom"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:1" typref="103245008" value="leNom"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:6:2:2" typref="3603043417" value="nom"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -415,11 +481,11 @@
 </Binary_Pred>
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
-<Exp_Comparison op=":" initialTag="((leProfil) : (((service) +-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="3576112639" value="leProfil"/>
-<Binary_Exp op="+-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="2063181425" value="profil"/>
+<Exp_Comparison op=":" initialTag="((leProfil) : (((processus) +-&gt; (profil))))">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:1" typref="103245008" value="leProfil"/>
+<Binary_Exp op="+-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:1" typref="3603043417" value="processus"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:7:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -432,10 +498,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((leProfilAutorise) : (((service) &lt;-&gt; (profil))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="3576112639" value="leProfilAutorise"/>
-<Binary_Exp op="&lt;-&gt;" typref="1074222490">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="2113264464" value="service"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="2063181425" value="profil"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:1" typref="103245008" value="leProfilAutorise"/>
+<Binary_Exp op="&lt;-&gt;" typref="3083833907">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:1" typref="3603043417" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:8:2:2" typref="3603043417" value="profil"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -448,9 +514,9 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((lEtat) : (((service) +-&gt; (ETAT))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="2854939941" value="lEtat"/>
-<Binary_Exp op="+-&gt;" typref="1744519028">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:1" typref="1165311580" value="lEtat"/>
+<Binary_Exp op="+-&gt;" typref="3789537533">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:9:2:2" typref="2539719319" value="ETAT"/>
 </Binary_Exp>
 </Exp_Comparison>
@@ -464,9 +530,9 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((leTypeDeService) : (((service) +-&gt; (TYPESERVICE))))">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="1804948036" value="leTypeDeService"/>
-<Binary_Exp op="+-&gt;" typref="3606595775">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="2113264464" value="service"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:1" typref="332788045" value="leTypeDeService"/>
+<Binary_Exp op="+-&gt;" typref="2602411766">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:1" typref="3603043417" value="service"/>
 <Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:3:1:10:2:2" typref="2200518486" value="TYPESERVICE"/>
 </Binary_Exp>
 </Exp_Comparison>
@@ -560,166 +626,106 @@
 </Goal>
 </Proof_Obligation>
 <TypeInfos>
-<Type id="3569248008">
+<Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:1:1:1" value="PROCESSUS"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:1:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
-<Type id="2113264464">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:2:1:1" value="SERVICE"/>
-</Unary_Exp>
-</Type>
-<Type id="2466216583">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:3:1:1" value="NOM"/>
-</Unary_Exp>
-</Type>
-<Type id="2063181425">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:4:1:1" value="PROFIL"/>
-</Unary_Exp>
-</Type>
-<Type id="4031867510">
+<Type id="103245008">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:5:1:1:1" value="PROCESSUS"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:5:1:1:2" value="SERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:2:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:2:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="395964917">
+<Type id="1165311580">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:6:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:6:1:1:2" value="NOM"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:3:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:3:1:1:2" value="ETAT"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="3576112639">
+<Type id="332788045">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:7:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:7:1:1:2" value="PROFIL"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:4:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:4:1:1:2" value="TYPESERVICE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="2854939941">
-<Unary_Exp op="POW">
-<Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:8:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:8:1:1:2" value="ETAT"/>
-</Binary_Exp>
-</Unary_Exp>
+<Type id="2701647786">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:5:1" value="INTEGER"/>
 </Type>
-<Type id="1804948036">
-<Unary_Exp op="POW">
-<Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:9:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:9:1:1:2" value="TYPESERVICE"/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="1903705485">
+<Type id="3083833907">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:10:1:1:1:1" value="PROCESSUS"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:10:1:1:1:2" value="SERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:6:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:6:1:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="1977414222">
+<Type id="3789537533">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:11:1:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:11:1:1:1:2" value="NOM"/>
-</Binary_Exp>
-</Unary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="1074222490">
-<Unary_Exp op="POW">
-<Unary_Exp op="POW">
-<Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:12:1:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:12:1:1:1:2" value="PROFIL"/>
-</Binary_Exp>
-</Unary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="1744519028">
-<Unary_Exp op="POW">
-<Unary_Exp op="POW">
-<Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:13:1:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:13:1:1:1:2" value="ETAT"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:7:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:7:1:1:1:2" value="ETAT"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="2539719319">
 <Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:14:1:1" value="ETAT"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:8:1:1" value="ETAT"/>
 </Unary_Exp>
 </Type>
-<Type id="3606595775">
+<Type id="2602411766">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:15:1:1:1:1" value="SERVICE"/>
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:15:1:1:1:2" value="TYPESERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:9:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:9:1:1:1:2" value="TYPESERVICE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="2200518486">
 <Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:16:1:1" value="TYPESERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:10:1:1" value="TYPESERVICE"/>
 </Unary_Exp>
 </Type>
 <Type id="3817003670">
 <Unary_Exp op="POW">
-<Generic_Type tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:17:1:1"/>
-</Unary_Exp>
-</Type>
-<Type id="3569248008">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:1:1:1" value="PROCESSUS"/>
-</Unary_Exp>
-</Type>
-<Type id="2113264464">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:2:1:1" value="SERVICE"/>
-</Unary_Exp>
-</Type>
-<Type id="2466216583">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:3:1:1" value="NOM"/>
-</Unary_Exp>
-</Type>
-<Type id="2063181425">
-<Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:4:1:1" value="PROFIL"/>
+<Generic_Type tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceFonctions.bxml:1:5:11:1:1"/>
 </Unary_Exp>
 </Type>
 <Type id="2539719319">
 <Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:5:1:1" value="ETAT"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:1:1:1" value="ETAT"/>
 </Unary_Exp>
 </Type>
 <Type id="678717378">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:6:1" value="ETAT"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:2:1" value="ETAT"/>
 </Type>
 <Type id="2200518486">
 <Unary_Exp op="POW">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:7:1:1" value="TYPESERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:3:1:1" value="TYPESERVICE"/>
 </Unary_Exp>
 </Type>
 <Type id="2423830893">
-<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:3:8:1" value="TYPESERVICE"/>
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:4:1" value="TYPESERVICE"/>
+</Type>
+<Type id="2701647786">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:5:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS/bdp/SystemeDeServiceOS.bxml:1:5:6:1:1" value="INTEGER"/>
+</Unary_Exp>
 </Type>
 </TypeInfos>
 </Proof_Obligations>

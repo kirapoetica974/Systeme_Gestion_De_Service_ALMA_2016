@@ -1,0 +1,663 @@
+<Machine name='SystemeDeServiceFonctions_i' type='implementation'>
+<Abstraction>SystemeDeServiceFonctions</Abstraction>
+<Sees>
+<Referenced_Machine>
+<Name>SystemeDeServiceOS</Name>
+</Referenced_Machine>
+</Sees>
+<Sets>
+<Set>
+<Id value='OKKO' typref='3173527797'/>
+<Enumerated_Values>
+<Id value='ok' typref='2100031460'/>
+<Id value='ko' typref='2100031460'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Variables>
+<Id value='c_processus' typref='1336458170'/>
+<Id value='c_service' typref='1336458170'/>
+<Id value='c_nom' typref='1336458170'/>
+<Id value='c_profil' typref='1336458170'/>
+<Id value='c_serviceUtilise' typref='1884358727'/>
+<Id value='c_leNom' typref='103245008'/>
+<Id value='c_leProfil' typref='1884358727'/>
+<Id value='c_leProfilAutorise' typref='1884358727'/>
+<Id value='c_lEtat' typref='1165311580'/>
+<Id value='c_leTypeDeService' typref='332788045'/>
+<Id value='c_serviceSouscrit' typref='1884358727'/>
+</Concrete_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='c_processus' typref='1336458170'/>
+<Binary_Exp op='--&gt;' typref='4189025567'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Id value='OKKO' typref='3173527797'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='processus' typref='3603043417'/>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_processus' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='processus' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_service' typref='1336458170'/>
+<Binary_Exp op='--&gt;' typref='4189025567'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Id value='OKKO' typref='3173527797'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='service' typref='3603043417'/>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_service' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='service' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_nom' typref='1336458170'/>
+<Binary_Exp op='--&gt;' typref='4189025567'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxNom' typref='2701647786'/>
+</Binary_Exp>
+<Id value='OKKO' typref='3173527797'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='nom' typref='3603043417'/>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_nom' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='nom' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxNom' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_profil' typref='1336458170'/>
+<Binary_Exp op='--&gt;' typref='4189025567'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+<Id value='OKKO' typref='3173527797'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='profil' typref='3603043417'/>
+<Binary_Exp op='[' typref='3603043417'>
+<Unary_Exp op='~' typref='3392313466'>
+<Id value='c_profil' typref='1336458170'/>
+</Unary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ok' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='profil' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_leNom' typref='103245008'/>
+<Binary_Exp op='--&gt;' typref='3083833907'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxNom' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='leNom' typref='103245008'/>
+<Binary_Exp op='&lt;|' typref='103245008'>
+<Id value='service' typref='3603043417'/>
+<Id value='c_leNom' typref='103245008'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_lEtat' typref='1165311580'/>
+<Binary_Exp op='--&gt;' typref='3789537533'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Id value='ETAT' typref='2539719319'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='lEtat' typref='1165311580'/>
+<Binary_Exp op='&lt;|' typref='1165311580'>
+<Id value='service' typref='3603043417'/>
+<Id value='c_lEtat' typref='1165311580'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_leTypeDeService' typref='332788045'/>
+<Binary_Exp op='--&gt;' typref='2602411766'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Id value='TYPESERVICE' typref='2200518486'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='leTypeDeService' typref='332788045'/>
+<Binary_Exp op='&lt;|' typref='332788045'>
+<Id value='service' typref='3603043417'/>
+<Id value='c_leTypeDeService' typref='332788045'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_serviceUtilise' typref='1884358727'/>
+<Binary_Exp op='--&gt;' typref='2134698876'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='serviceUtilise' typref='103245008'/>
+<Unary_Exp op='dom' typref='103245008'>
+<Binary_Exp op='|&gt;' typref='1884358727'>
+<Id value='c_serviceUtilise' typref='1884358727'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_leProfil' typref='1884358727'/>
+<Binary_Exp op='--&gt;' typref='2134698876'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='leProfil' typref='103245008'/>
+<Unary_Exp op='dom' typref='103245008'>
+<Binary_Exp op='|&gt;' typref='1884358727'>
+<Id value='c_leProfil' typref='1884358727'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_leProfilAutorise' typref='1884358727'/>
+<Binary_Exp op='--&gt;' typref='2134698876'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='leProfilAutorise' typref='103245008'/>
+<Unary_Exp op='dom' typref='103245008'>
+<Binary_Exp op='|&gt;' typref='1884358727'>
+<Id value='c_leProfilAutorise' typref='1884358727'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='c_serviceSouscrit' typref='1884358727'/>
+<Binary_Exp op='--&gt;' typref='2134698876'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='serviceSouscrit' typref='103245008'/>
+<Unary_Exp op='dom' typref='103245008'>
+<Binary_Exp op='|&gt;' typref='1884358727'>
+<Id value='c_serviceSouscrit' typref='1884358727'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='c_processus' typref='1336458170'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1336458170'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ko' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_service' typref='1336458170'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1336458170'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ko' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_nom' typref='1336458170'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1336458170'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxNom' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ko' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_profil' typref='1336458170'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1336458170'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3173527797'>
+<Id value='ko' typref='2100031460'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_serviceUtilise' typref='1884358727'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1884358727'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_leNom' typref='103245008'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_leProfil' typref='1884358727'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1884358727'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_leProfilAutorise' typref='1884358727'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1884358727'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_lEtat' typref='1165311580'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1165311580'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='2539719319'>
+<Id value='inactif' typref='678717378'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_leTypeDeService' typref='332788045'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='332788045'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+<Nary_Exp op='{' typref='2200518486'>
+<Id value='nonExclusif' typref='2423830893'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='c_serviceSouscrit' typref='1884358727'/>
+</Variables>
+<Values>
+<Binary_Exp op='*' typref='1884358727'>
+<Binary_Exp op='*' typref='103245008'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxProc' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<TypeInfos>
+<Type id='3173527797'>
+<Unary_Exp op='POW'>
+<Id value='OKKO'/>
+</Unary_Exp>
+</Type>
+<Type id='2100031460'>
+<Id value='OKKO'/>
+</Type>
+<Type id='1336458170'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='OKKO'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1884358727'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='103245008'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1165311580'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='ETAT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='332788045'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='TYPESERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4189025567'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='OKKO'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3392313466'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='OKKO'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3083833907'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3789537533'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='ETAT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2539719319'>
+<Unary_Exp op='POW'>
+<Id value='ETAT'/>
+</Unary_Exp>
+</Type>
+<Type id='2602411766'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='TYPESERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2200518486'>
+<Unary_Exp op='POW'>
+<Id value='TYPESERVICE'/>
+</Unary_Exp>
+</Type>
+<Type id='2134698876'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='678717378'>
+<Id value='ETAT'/>
+</Type>
+<Type id='2423830893'>
+<Id value='TYPESERVICE'/>
+</Type>
+</TypeInfos>
+
+</Machine>

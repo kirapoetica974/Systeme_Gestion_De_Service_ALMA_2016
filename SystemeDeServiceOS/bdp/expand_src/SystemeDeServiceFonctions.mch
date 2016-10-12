@@ -9,6 +9,12 @@ MACHINE
 SEES
     SystemeDeServiceOS
 
+DEFINITIONS
+    PROCESSUS == 0 .. maxProc
+    ; SERVICE == 0 .. maxServ
+    ; NOM == 0 .. maxNom
+    ; PROFIL == 0 .. maxProfil
+
 ABSTRACT_VARIABLES
     /*Les petits ensembles*/
     processus ,
@@ -35,7 +41,7 @@ INVARIANT
     /*Déclaration des fonctions et relations*/
     & serviceUtilise : processus <-> service
     & leNom : service +-> nom
-    & leProfil : service +-> profil
+    & leProfil : processus +-> profil
     & leProfilAutorise : service <-> profil
     & lEtat : service +-> ETAT
     & leTypeDeService : service +-> TYPESERVICE

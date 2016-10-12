@@ -35,44 +35,41 @@ CONCRETE_VARIABLES
     c_serviceSouscrit
 
 INVARIANT
-    c_processus : 0 .. maxProc --> OKKO
+    c_processus : ( 0 .. maxProc ) --> OKKO
     & processus = c_processus ~ [ { ok } ]
-    & processus <: 0 .. maxProc
+    & processus <: ( 0 .. maxProc )
 
-    & c_service : 0 .. maxServ --> OKKO
+    & c_service : ( 0 .. maxServ ) --> OKKO
     & service = c_service ~ [ { ok } ]
-    & service <: 0 .. maxServ
+    & service <: ( 0 .. maxServ )
 
-    & c_nom : 0 .. maxNom --> OKKO
+    & c_nom : ( 0 .. maxNom ) --> OKKO
     & nom = c_nom ~ [ { ok } ]
-    & nom <: 0 .. maxNom
+    & nom <: ( 0 .. maxNom )
 
-    & c_profil : 0 .. maxProfil --> OKKO
+    & c_profil : ( 0 .. maxProfil ) --> OKKO
     & profil = c_profil ~ [ { ok } ]
-    & profil <: 0 .. maxProfil
+    & profil <: ( 0 .. maxProfil )
 
-    & c_leNom : 0 .. maxServ --> 0 .. maxNom
+    & c_leNom : ( 0 .. maxServ ) --> ( 0 .. maxNom )
     & leNom = ( service <| c_leNom )
 
-    & c_leProfil : 0 .. maxProc --> 0 .. maxProfil
-    & leProfil = ( processus <| c_leProfil )
-
-    & c_lEtat : 0 .. maxServ --> ETAT
+    & c_lEtat : ( 0 .. maxServ ) --> ETAT
     & lEtat = ( service <| c_lEtat )
 
-    & c_leTypeDeService : 0 .. maxServ --> TYPESERVICE
+    & c_leTypeDeService : ( 0 .. maxServ ) --> TYPESERVICE
     & leTypeDeService = ( service <| c_leTypeDeService )
 
-    & c_serviceUtilise : ( 0 .. maxProc * ( 0 .. maxServ ) ) +-> 0 .. 1 /*La relation est encodée par une matrice*/
+    & c_serviceUtilise : ( ( 0 .. maxProc ) * ( 0 .. maxServ ) ) --> ( 0 .. 1 ) /*La relation est encodée par une matrice*/
     & serviceUtilise = dom ( c_serviceUtilise |> { 1 } ) /*les éléments dans la relation serviceUtilise sont ceux pour lesquels la matrice contient 1*/
 
-    & c_leProfil : ( 0 .. maxProc * ( 0 .. maxProfil ) ) +-> 0 .. 1
+    & c_leProfil : ( ( 0 .. maxProc ) * ( 0 .. maxProfil ) ) --> ( 0 .. 1 )
     & leProfil = dom ( c_leProfil |> { 1 } )
 
-    & c_leProfilAutorise : ( 0 .. maxServ * ( 0 .. maxProfil ) ) +-> 0 .. 1
+    & c_leProfilAutorise : ( ( 0 .. maxServ ) * ( 0 .. maxProfil ) ) --> ( 0 .. 1 )
     & leProfilAutorise = dom ( c_leProfilAutorise |> { 1 } )
 
-    & c_serviceSouscrit : ( 0 .. maxProc * ( 0 .. maxServ ) ) +-> 0 .. 1
+    & c_serviceSouscrit : ( ( 0 .. maxProc ) * ( 0 .. maxServ ) ) --> ( 0 .. 1 )
     & serviceSouscrit = dom ( c_serviceSouscrit |> { 1 } )
 
 
@@ -84,12 +81,12 @@ INITIALISATION
     c_profil := ( 0 .. maxProfil ) * { ko } ;
 
     /*Les relations et fonctions*/
-    c_serviceUtilise := ( 0 .. maxProc * ( 0 .. maxServ ) ) * { 0 } ;
+    c_serviceUtilise := ( ( 0 .. maxProc ) * ( 0 .. maxServ ) ) * { 0 } ;
     c_leNom := ( 0 .. maxServ ) * { 0 } ;
-    c_leProfil := ( 0 .. maxProc * ( 0 .. maxProfil ) ) * { 0 } ;
-    c_leProfilAutorise := ( 0 .. maxServ * ( 0 .. maxNom ) ) * { 0 } ;
+    c_leProfil := ( ( 0 .. maxProc ) * ( 0 .. maxProfil ) ) * { 0 } ;
+    c_leProfilAutorise := ( ( 0 .. maxServ ) * ( 0 .. maxProfil ) ) * { 0 } ;
     c_lEtat := ( 0 .. maxServ ) * { inactif } ;
     c_leTypeDeService := ( 0 .. maxServ ) * { nonExclusif } ;
-    c_serviceSouscrit := ( 0 .. maxProc * ( 0 .. maxServ ) ) * { 0 } ;
+    c_serviceSouscrit := ( ( 0 .. maxProc ) * ( 0 .. maxServ ) ) * { 0 }
 
 END

@@ -35,44 +35,41 @@ CONCRETE_VARIABLES
     c_serviceSouscrit
     
 INVARIANT
-    c_processus : PROCESSUS --> OKKO
+    c_processus : (PROCESSUS)--> OKKO
     & processus = c_processus~[{ok}]
-    & processus <: PROCESSUS
+    & processus <: (PROCESSUS)
     
-    & c_service : SERVICE --> OKKO
+    & c_service : (SERVICE) --> OKKO
     & service = c_service~[{ok}]
-    & service <: SERVICE
+    & service <: (SERVICE)
     
-    & c_nom : NOM --> OKKO
+    & c_nom : (NOM) --> OKKO
     & nom = c_nom~[{ok}]
-    & nom <: NOM
+    & nom <: (NOM)
     
-    & c_profil : PROFIL --> OKKO
+    & c_profil : (PROFIL) --> OKKO
     & profil = c_profil~[{ok}]
-    & profil <: PROFIL
+    & profil <: (PROFIL)
     
-    & c_leNom : SERVICE --> NOM
+    & c_leNom : (SERVICE) --> (NOM)
     & leNom = (service <| c_leNom)
     
-    & c_leProfil : PROCESSUS --> PROFIL
-    & leProfil = (processus <| c_leProfil)
-    
-    & c_lEtat : SERVICE --> ETAT
+    & c_lEtat : (SERVICE) --> ETAT
     & lEtat = (service <| c_lEtat)
     
-    & c_leTypeDeService : SERVICE --> TYPESERVICE
+    & c_leTypeDeService : (SERVICE) --> TYPESERVICE
     & leTypeDeService = (service <| c_leTypeDeService)
     
-    & c_serviceUtilise : (PROCESSUS * (SERVICE)) +-> 0..1 /*La relation est encodée par une matrice*/
+    & c_serviceUtilise : ((PROCESSUS) * (SERVICE)) --> (0..1) /*La relation est encodée par une matrice*/
     & serviceUtilise = dom(c_serviceUtilise |> {1}) /*les éléments dans la relation serviceUtilise sont ceux pour lesquels la matrice contient 1*/
     
-    & c_leProfil : (PROCESSUS * (PROFIL)) +-> 0..1 
+    & c_leProfil : ((PROCESSUS) * (PROFIL)) --> (0..1)
     & leProfil = dom(c_leProfil |> {1}) 
     
-    & c_leProfilAutorise : (SERVICE * (PROFIL)) +-> 0..1 
+    & c_leProfilAutorise : ((SERVICE) * (PROFIL)) --> (0..1)
     & leProfilAutorise = dom(c_leProfilAutorise |> {1}) 
     
-    & c_serviceSouscrit : (PROCESSUS * (SERVICE)) +-> 0..1 
+    & c_serviceSouscrit : ((PROCESSUS) * (SERVICE)) --> (0..1) 
     & serviceSouscrit = dom(c_serviceSouscrit |> {1}) 
     
     
@@ -84,13 +81,13 @@ INITIALISATION
     c_profil := (PROFIL) * {ko};
     
     /*Les relations et fonctions*/
-    c_serviceUtilise := (PROCESSUS * (SERVICE))*{0};
+    c_serviceUtilise := ((PROCESSUS) * (SERVICE))*{0};
     c_leNom := (SERVICE) * {0};
-    c_leProfil := (PROCESSUS * (PROFIL)) * {0};
-    c_leProfilAutorise := (SERVICE * (NOM)) * {0};
+    c_leProfil := ((PROCESSUS) * (PROFIL))*{0};
+    c_leProfilAutorise := ((SERVICE) * (PROFIL)) * {0};
     c_lEtat := (SERVICE) * {inactif};
     c_leTypeDeService := (SERVICE) * {nonExclusif};
-    c_serviceSouscrit := (PROCESSUS * (SERVICE)) * {0};
+    c_serviceSouscrit := ((PROCESSUS) * (SERVICE)) * {0}
     
 END
 

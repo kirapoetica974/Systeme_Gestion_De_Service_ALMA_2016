@@ -9,6 +9,12 @@ MACHINE
 SEES
     SystemeDeServiceOS
 
+
+
+
+
+
+
 ABSTRACT_VARIABLES
     /*Les petits ensembles*/
     processus ,
@@ -27,15 +33,15 @@ ABSTRACT_VARIABLES
 
 INVARIANT
     /*Les petits ensembles sont inclus dans les grands ensembles*/
-    processus <: PROCESSUS
-    & service <: SERVICE
-    & nom <: NOM
-    & profil <: PROFIL
+    processus <: 0 .. maxProc
+    & service <: 0 .. maxServ
+    & nom <: 0 .. maxNom
+    & profil <: 0 .. maxProfil
 
     /*Déclaration des fonctions et relations*/
     & serviceUtilise : processus <-> service
     & leNom : service +-> nom
-    & leProfil : service +-> profil
+    & leProfil : processus +-> profil
     & leProfilAutorise : service <-> profil
     & lEtat : service +-> ETAT
     & leTypeDeService : service +-> TYPESERVICE

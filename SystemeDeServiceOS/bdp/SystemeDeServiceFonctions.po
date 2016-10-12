@@ -11,16 +11,16 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERVICE = {}) & NOM: FIN(INTEGER) & not(NOM = {}) & PROFIL: FIN(INTEGER) & not(PROFIL = {}) & ((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {}) & ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {});
+((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {}) & ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {}) & ((maxProc) : (((0) .. (2147483647)))) & ((maxServ) : (((0) .. (2147483647)))) & ((maxNom) : (((0) .. (2147483647)))) & ((maxProfil) : (((0) .. (2147483647))));
 "Invariant is preserved";
-"Check invariant processus : POW( PROCESSUS)";
-{} : POW( PROCESSUS);
-"Check invariant service : POW( SERVICE)";
-{} : POW( SERVICE);
-"Check invariant nom : POW( NOM)";
-{} : POW( NOM);
-"Check invariant profil : POW( PROFIL)";
-{} : POW( PROFIL);
+"Check invariant processus : POW( ((0) .. (maxProc)))";
+{} : POW( ((0) .. (maxProc)));
+"Check invariant service : POW( ((0) .. (maxServ)))";
+{} : POW( ((0) .. (maxServ)));
+"Check invariant nom : POW( ((0) .. (maxNom)))";
+{} : POW( ((0) .. (maxNom)));
+"Check invariant profil : POW( ((0) .. (maxProfil)))";
+{} : POW( ((0) .. (maxProfil)));
 "Check invariant ((serviceUtilise) : (((processus) <-> (service))))";
 (({}) : ((({}) <-> ({}))));
 "Check invariant ((leNom) : (((service) +-> (nom))))";
@@ -32,14 +32,14 @@ PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERV
 ((leTypeDeService) : (((service) +-> (((1..2)*{TYPESERVICE})))));
 ((lEtat) : (((service) +-> (((1..2)*{ETAT})))));
 ((leProfilAutorise) : (((service) <-> (profil))));
-((leProfil) : (((service) +-> (profil))));
+((leProfil) : (((processus) +-> (profil))));
 ((leNom) : (((service) +-> (nom))));
 ((serviceUtilise) : (((processus) <-> (service))));
-profil : POW( PROFIL);
-nom : POW( NOM);
-service : POW( SERVICE);
-processus : POW( PROCESSUS);
-processus : POW( PROCESSUS) & service : POW( SERVICE) & nom : POW( NOM) & profil : POW( PROFIL) & ((serviceUtilise) : (((processus) <-> (service)))) & ((leNom) : (((service) +-> (nom)))) & ((leProfil) : (((service) +-> (profil)))) & ((leProfilAutorise) : (((service) <-> (profil)))) & ((lEtat) : (((service) +-> (((1..2)*{ETAT}))))) & ((leTypeDeService) : (((service) +-> (((1..2)*{TYPESERVICE}))))) & ((serviceSouscrit) : (((processus) <-> (service))))
+profil : POW( ((0) .. (maxProfil)));
+nom : POW( ((0) .. (maxNom)));
+service : POW( ((0) .. (maxServ)));
+processus : POW( ((0) .. (maxProc)));
+processus : POW( ((0) .. (maxProc))) & service : POW( ((0) .. (maxServ))) & nom : POW( ((0) .. (maxNom))) & profil : POW( ((0) .. (maxProfil))) & ((serviceUtilise) : (((processus) <-> (service)))) & ((leNom) : (((service) +-> (nom)))) & ((leProfil) : (((processus) +-> (profil)))) & ((leProfilAutorise) : (((service) <-> (profil)))) & ((lEtat) : (((service) +-> (((1..2)*{ETAT}))))) & ((leTypeDeService) : (((service) +-> (((1..2)*{TYPESERVICE}))))) & ((serviceSouscrit) : (((processus) <-> (service))))
 END
 &
 THEORY EnumerateX IS
