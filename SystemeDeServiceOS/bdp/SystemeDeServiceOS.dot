@@ -1,6 +1,8 @@
 digraph {
 GestionSystemeDeService1 [ label=" GestionSystemeDeService1 " shape= box ]
+SystemeDeServiceFonctions [ label=" SystemeDeServiceFonctions " shape= box ]
 SystemeDeServiceOS_i [ label=" SystemeDeServiceOS\nSystemeDeServiceOS_i " shape= box ]
 
 "GestionSystemeDeService1" -> "SystemeDeServiceOS_i" [style= dotted ]
+"SystemeDeServiceFonctions" -> "SystemeDeServiceOS_i" [style= dotted ]
 }
