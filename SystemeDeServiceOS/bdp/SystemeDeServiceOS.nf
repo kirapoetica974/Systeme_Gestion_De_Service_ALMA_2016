@@ -110,27 +110,23 @@ THEORY ListPreconditionX END
 THEORY ListSubstitutionX END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(SystemeDeServiceOS))==(?);
+  List_Valuable_Constants(Machine(SystemeDeServiceOS))==(maxProc,maxServ,maxNom,maxProfil);
   Inherited_List_Constants(Machine(SystemeDeServiceOS))==(?);
-  List_Constants(Machine(SystemeDeServiceOS))==(?)
+  List_Constants(Machine(SystemeDeServiceOS))==(maxProc,maxServ,maxNom,maxProfil)
 END
 &
 THEORY ListSetsX IS
-  Set_Definition(Machine(SystemeDeServiceOS),PROCESSUS)==(?);
+  Set_Definition(Machine(SystemeDeServiceOS),ETAT)==({actif,inactif});
   Context_List_Enumerated(Machine(SystemeDeServiceOS))==(?);
   Context_List_Defered(Machine(SystemeDeServiceOS))==(?);
   Context_List_Sets(Machine(SystemeDeServiceOS))==(?);
-  List_Valuable_Sets(Machine(SystemeDeServiceOS))==(PROCESSUS,SERVICE,NOM,PROFIL);
+  List_Valuable_Sets(Machine(SystemeDeServiceOS))==(?);
   Inherited_List_Enumerated(Machine(SystemeDeServiceOS))==(?);
   Inherited_List_Defered(Machine(SystemeDeServiceOS))==(?);
   Inherited_List_Sets(Machine(SystemeDeServiceOS))==(?);
   List_Enumerated(Machine(SystemeDeServiceOS))==(ETAT,TYPESERVICE);
-  List_Defered(Machine(SystemeDeServiceOS))==(PROCESSUS,SERVICE,NOM,PROFIL);
-  List_Sets(Machine(SystemeDeServiceOS))==(PROCESSUS,SERVICE,NOM,PROFIL,ETAT,TYPESERVICE);
-  Set_Definition(Machine(SystemeDeServiceOS),SERVICE)==(?);
-  Set_Definition(Machine(SystemeDeServiceOS),NOM)==(?);
-  Set_Definition(Machine(SystemeDeServiceOS),PROFIL)==(?);
-  Set_Definition(Machine(SystemeDeServiceOS),ETAT)==({actif,inactif});
+  List_Defered(Machine(SystemeDeServiceOS))==(?);
+  List_Sets(Machine(SystemeDeServiceOS))==(ETAT,TYPESERVICE);
   Set_Definition(Machine(SystemeDeServiceOS),TYPESERVICE)==({exclusif,nonExclusif})
 END
 &
@@ -145,7 +141,7 @@ THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(SystemeDeServiceOS))==(btrue);
   Context_List_Properties(Machine(SystemeDeServiceOS))==(btrue);
   Inherited_List_Properties(Machine(SystemeDeServiceOS))==(btrue);
-  List_Properties(Machine(SystemeDeServiceOS))==(PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERVICE = {}) & NOM: FIN(INTEGER) & not(NOM = {}) & PROFIL: FIN(INTEGER) & not(PROFIL = {}) & ETAT: FIN(INTEGER) & not(ETAT = {}) & TYPESERVICE: FIN(INTEGER) & not(TYPESERVICE = {}))
+  List_Properties(Machine(SystemeDeServiceOS))==(maxProc: 0..MAXINT & maxServ: 0..MAXINT & maxNom: 0..MAXINT & maxProfil: 0..MAXINT & ETAT: FIN(INTEGER) & not(ETAT = {}) & TYPESERVICE: FIN(INTEGER) & not(TYPESERVICE = {}))
 END
 &
 THEORY ListSeenInfoX END
@@ -153,19 +149,19 @@ THEORY ListSeenInfoX END
 THEORY ListANYVarX END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(SystemeDeServiceOS)) == (PROCESSUS,SERVICE,NOM,PROFIL,ETAT,TYPESERVICE,actif,inactif,exclusif,nonExclusif | ? | ? | ? | ? | ? | ? | ? | SystemeDeServiceOS);
+  List_Of_Ids(Machine(SystemeDeServiceOS)) == (maxProc,maxServ,maxNom,maxProfil,ETAT,TYPESERVICE,actif,inactif,exclusif,nonExclusif | ? | ? | ? | ? | ? | ? | ? | SystemeDeServiceOS);
   List_Of_HiddenCst_Ids(Machine(SystemeDeServiceOS)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(SystemeDeServiceOS)) == (?);
+  List_Of_VisibleCst_Ids(Machine(SystemeDeServiceOS)) == (maxProc,maxServ,maxNom,maxProfil);
   List_Of_VisibleVar_Ids(Machine(SystemeDeServiceOS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(SystemeDeServiceOS)) == (?: ?)
 END
 &
 THEORY SetsEnvX IS
-  Sets(Machine(SystemeDeServiceOS)) == (Type(PROCESSUS) == Cst(SetOf(atype(PROCESSUS,"[PROCESSUS","]PROCESSUS")));Type(SERVICE) == Cst(SetOf(atype(SERVICE,"[SERVICE","]SERVICE")));Type(NOM) == Cst(SetOf(atype(NOM,"[NOM","]NOM")));Type(PROFIL) == Cst(SetOf(atype(PROFIL,"[PROFIL","]PROFIL")));Type(ETAT) == Cst(SetOf(etype(ETAT,0,1)));Type(TYPESERVICE) == Cst(SetOf(etype(TYPESERVICE,0,1))))
+  Sets(Machine(SystemeDeServiceOS)) == (Type(ETAT) == Cst(SetOf(etype(ETAT,0,1)));Type(TYPESERVICE) == Cst(SetOf(etype(TYPESERVICE,0,1))))
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(SystemeDeServiceOS)) == (Type(actif) == Cst(etype(ETAT,0,1));Type(inactif) == Cst(etype(ETAT,0,1));Type(exclusif) == Cst(etype(TYPESERVICE,0,1));Type(nonExclusif) == Cst(etype(TYPESERVICE,0,1)))
+  Constants(Machine(SystemeDeServiceOS)) == (Type(actif) == Cst(etype(ETAT,0,1));Type(inactif) == Cst(etype(ETAT,0,1));Type(exclusif) == Cst(etype(TYPESERVICE,0,1));Type(nonExclusif) == Cst(etype(TYPESERVICE,0,1));Type(maxProc) == Cst(btype(INTEGER,?,?));Type(maxServ) == Cst(btype(INTEGER,?,?));Type(maxNom) == Cst(btype(INTEGER,?,?));Type(maxProfil) == Cst(btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

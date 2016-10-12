@@ -1,4 +1,4 @@
-﻿/* SystemeDeService
+﻿/* SystemeDeServiceOS_i
  * Author: Hiba Benyahia, Rachelle Taochy, Adel Benabadji, Sidali Hallak
  * Creation date: 05/10/16
  */
@@ -6,10 +6,16 @@
 IMPLEMENTATION SystemeDeServiceOS_i
 REFINES SystemeDeServiceOS
 
+
+
+
+
+
+
 VALUES
-    SERVICE = 0 .. 50 ;
-    NOM = 0 .. 30 ;
-    PROFIL = 0 .. 30 ;
-    PROCESSUS = 0 .. 30
+    maxProc = 30 ;
+    maxServ = 30 ;
+    maxNom = 30 ;
+    maxProfil = 30
 
 END

@@ -1,0 +1,95 @@
+﻿/* SystemeDeServiceFonctions_i
+ * Author: Hiba Benyahia, Rachelle Taochy, Adel Benabadji, Sidali Hallak
+ * Creation date: 12/10/16
+ */
+
+IMPLEMENTATION SystemeDeServiceFonctions_i
+REFINES SystemeDeServiceFonctions
+
+SEES
+    SystemeDeServiceOS
+
+SETS
+    OKKO = { ok , ko } /*Indique si élément utilisé ou non*/
+
+DEFINITIONS
+    PROCESSUS == 0 .. maxProc
+    ; SERVICE == 0 .. maxServ
+    ; NOM == 0 .. maxNom
+    ; PROFIL == 0 .. maxProfil
+
+CONCRETE_VARIABLES
+    /*Les petits ensembles*/
+    c_processus ,
+    c_service ,
+    c_nom ,
+    c_profil ,
+
+    /*Les relations et fonctions*/
+    c_serviceUtilise ,
+    c_leNom ,
+    c_leProfil ,
+    c_leProfilAutorise ,
+    c_lEtat ,
+    c_leTypeDeService ,
+    c_serviceSouscrit
+
+INVARIANT
+    c_processus : PROCESSUS --> OKKO
+    & processus = c_processus ~ [ { ok } ]
+    & processus <: PROCESSUS
+
+    & c_service : SERVICE --> OKKO
+    & service = c_service ~ [ { ok } ]
+    & service <: SERVICE
+
+    & c_nom : NOM --> OKKO
+    & nom = c_nom ~ [ { ok } ]
+    & nom <: NOM
+
+    & c_profil : PROFIL --> OKKO
+    & profil = c_profil ~ [ { ok } ]
+    & profil <: PROFIL
+
+    & c_leNom : SERVICE --> NOM
+    & leNom = ( service <| c_leNom )
+
+    & c_leProfil : PROCESSUS --> PROFIL
+    & leProfil = ( processus <| c_leProfil )
+
+    & c_lEtat : SERVICE --> ETAT
+    & lEtat = ( service <| c_lEtat )
+
+    & c_leTypeDeService : SERVICE --> TYPESERVICE
+    & leTypeDeService = ( service <| c_leTypeDeService )
+
+    & c_serviceUtilise : ( PROCESSUS * ( SERVICE ) ) +-> 0 .. 1 /*La relation est encodée par une matrice*/
+    & serviceUtilise = dom ( c_serviceUtilise |> { 1 } ) /*les éléments dans la relation serviceUtilise sont ceux pour lesquels la matrice contient 1*/
+
+    & c_leProfil : ( PROCESSUS * ( PROFIL ) ) +-> 0 .. 1
+    & leProfil = dom ( c_leProfil |> { 1 } )
+
+    & c_leProfilAutorise : ( SERVICE * ( PROFIL ) ) +-> 0 .. 1
+    & leProfilAutorise = dom ( c_leProfilAutorise |> { 1 } )
+
+    & c_serviceSouscrit : ( PROCESSUS * ( SERVICE ) ) +-> 0 .. 1
+    & serviceSouscrit = dom ( c_serviceSouscrit |> { 1 } )
+
+
+INITIALISATION
+    /*Initialisation des variables concrètes => les petits ensembles ne contiennent aucun élément*/
+    c_processus := ( PROCESSUS ) * { ko } ;
+    c_service := ( SERVICE ) * { ko } ;
+    c_nom := ( NOM ) * { ko } ;
+    c_profil := ( PROFIL ) * { ko } ;
+
+    /*Les relations et fonctions*/
+    c_serviceUtilise := ( PROCESSUS * ( SERVICE ) ) * { 0 } ;
+    c_leNom := ( SERVICE ) * { 0 } ;
+    c_leProfil := ( PROCESSUS * ( PROFIL ) ) * { 0 } ;
+    c_leProfilAutorise := ( SERVICE * ( NOM ) ) * { 0 } ;
+    c_lEtat := ( SERVICE ) * { inactif } ;
+    c_leTypeDeService := ( SERVICE ) * { nonExclusif } ;
+    c_serviceSouscrit := ( PROCESSUS * ( SERVICE ) ) * { 0 } ;
+
+END

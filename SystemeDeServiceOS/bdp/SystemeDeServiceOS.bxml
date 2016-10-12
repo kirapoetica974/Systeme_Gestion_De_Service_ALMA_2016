@@ -1,18 +1,6 @@
 <Machine name='SystemeDeServiceOS' type='abstraction'>
 <Sets>
 <Set>
-<Id value='PROCESSUS' typref='3569248008'/>
-</Set>
-<Set>
-<Id value='SERVICE' typref='2113264464'/>
-</Set>
-<Set>
-<Id value='NOM' typref='2466216583'/>
-</Set>
-<Set>
-<Id value='PROFIL' typref='2063181425'/>
-</Set>
-<Set>
 <Id value='ETAT' typref='2539719319'/>
 <Enumerated_Values>
 <Id value='actif' typref='678717378'/>
@@ -27,30 +15,48 @@
 </Enumerated_Values>
 </Set>
 </Sets>
+<Concrete_Constants>
+<Id value='maxProc' typref='2701647786'/>
+<Id value='maxServ' typref='2701647786'/>
+<Id value='maxNom' typref='2701647786'/>
+<Id value='maxProfil' typref='2701647786'/>
+</Concrete_Constants>
+<Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='maxProc' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='MAXINT' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='maxServ' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='MAXINT' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='maxNom' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='MAXINT' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='maxProfil' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='MAXINT' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
 <Initialisation>
 <Skip/>
 </Initialisation>
 <TypeInfos>
-<Type id='3569248008'>
-<Unary_Exp op='POW'>
-<Id value='PROCESSUS'/>
-</Unary_Exp>
-</Type>
-<Type id='2113264464'>
-<Unary_Exp op='POW'>
-<Id value='SERVICE'/>
-</Unary_Exp>
-</Type>
-<Type id='2466216583'>
-<Unary_Exp op='POW'>
-<Id value='NOM'/>
-</Unary_Exp>
-</Type>
-<Type id='2063181425'>
-<Unary_Exp op='POW'>
-<Id value='PROFIL'/>
-</Unary_Exp>
-</Type>
 <Type id='2539719319'>
 <Unary_Exp op='POW'>
 <Id value='ETAT'/>
@@ -66,6 +72,14 @@
 </Type>
 <Type id='2423830893'>
 <Id value='TYPESERVICE'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
 </Type>
 </TypeInfos>
 

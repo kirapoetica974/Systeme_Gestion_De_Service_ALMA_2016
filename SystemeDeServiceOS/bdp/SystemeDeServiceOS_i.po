@@ -1,5 +1,4 @@
 THEORY ProofList IS
-_f(1) & ValuesLemmas.4,(_f(2) => _f(6));
 _f(1) & ValuesLemmas.3,(_f(2) => _f(5));
 _f(1) & ValuesLemmas.2,(_f(2) => _f(4));
 _f(1) & ValuesLemmas.1,(_f(2) => _f(3))
@@ -8,12 +7,11 @@ END
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
 "Valuation is correct";
-((0) .. (30)): FIN(INTEGER) & not(((0) .. (30)) = {});
-((0) .. (50)): FIN(INTEGER) & not(((0) .. (50)) = {});
+((30) : (((0) .. (2147483647))));
 ((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {});
 ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {});
-PROCESSUS: FIN(INTEGER) & not(PROCESSUS = {}) & SERVICE: FIN(INTEGER) & not(SERVICE = {}) & NOM: FIN(INTEGER) & not(NOM = {}) & PROFIL: FIN(INTEGER) & not(PROFIL = {}) & ((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {}) & ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {});
-((SERVICE) = (((0) .. (50)))) & ((NOM) = (((0) .. (30)))) & ((PROFIL) = (((0) .. (30)))) & ((PROCESSUS) = (((0) .. (30))))
+((1..2)*{ETAT}): FIN(NATURAL*{ETAT}) & not(((1..2)*{ETAT}) = {}) & ((1..2)*{TYPESERVICE}): FIN(NATURAL*{TYPESERVICE}) & not(((1..2)*{TYPESERVICE}) = {}) & ((maxProc) : (((0) .. (2147483647)))) & ((maxServ) : (((0) .. (2147483647)))) & ((maxNom) : (((0) .. (2147483647)))) & ((maxProfil) : (((0) .. (2147483647))));
+((maxProc) = (30)) & ((maxServ) = (30)) & ((maxNom) = (30)) & ((maxProfil) = (30))
 END
 &
 THEORY EnumerateX IS

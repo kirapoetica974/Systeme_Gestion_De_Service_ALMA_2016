@@ -1,0 +1,95 @@
+﻿/* SystemeDeServiceFonctions_i
+ * Author: Hiba Benyahia, Rachelle Taochy, Adel Benabadji, Sidali Hallak
+ * Creation date: 12/10/16
+ */
+
+IMPLEMENTATION SystemeDeServiceFonctions_i
+REFINES SystemeDeServiceFonctions
+
+SEES
+    SystemeDeServiceOS
+
+SETS
+    OKKO = { ok , ko } /*Indique si élément utilisé ou non*/
+
+
+
+
+
+
+
+CONCRETE_VARIABLES
+    /*Les petits ensembles*/
+    c_processus ,
+    c_service ,
+    c_nom ,
+    c_profil ,
+
+    /*Les relations et fonctions*/
+    c_serviceUtilise ,
+    c_leNom ,
+    c_leProfil ,
+    c_leProfilAutorise ,
+    c_lEtat ,
+    c_leTypeDeService ,
+    c_serviceSouscrit
+
+INVARIANT
+    c_processus : 0 .. maxProc --> OKKO
+    & processus = c_processus ~ [ { ok } ]
+    & processus <: 0 .. maxProc
+
+    & c_service : 0 .. maxServ --> OKKO
+    & service = c_service ~ [ { ok } ]
+    & service <: 0 .. maxServ
+
+    & c_nom : 0 .. maxNom --> OKKO
+    & nom = c_nom ~ [ { ok } ]
+    & nom <: 0 .. maxNom
+
+    & c_profil : 0 .. maxProfil --> OKKO
+    & profil = c_profil ~ [ { ok } ]
+    & profil <: 0 .. maxProfil
+
+    & c_leNom : 0 .. maxServ --> 0 .. maxNom
+    & leNom = ( service <| c_leNom )
+
+    & c_leProfil : 0 .. maxProc --> 0 .. maxProfil
+    & leProfil = ( processus <| c_leProfil )
+
+    & c_lEtat : 0 .. maxServ --> ETAT
+    & lEtat = ( service <| c_lEtat )
+
+    & c_leTypeDeService : 0 .. maxServ --> TYPESERVICE
+    & leTypeDeService = ( service <| c_leTypeDeService )
+
+    & c_serviceUtilise : ( 0 .. maxProc * ( 0 .. maxServ ) ) +-> 0 .. 1 /*La relation est encodée par une matrice*/
+    & serviceUtilise = dom ( c_serviceUtilise |> { 1 } ) /*les éléments dans la relation serviceUtilise sont ceux pour lesquels la matrice contient 1*/
+
+    & c_leProfil : ( 0 .. maxProc * ( 0 .. maxProfil ) ) +-> 0 .. 1
+    & leProfil = dom ( c_leProfil |> { 1 } )
+
+    & c_leProfilAutorise : ( 0 .. maxServ * ( 0 .. maxProfil ) ) +-> 0 .. 1
+    & leProfilAutorise = dom ( c_leProfilAutorise |> { 1 } )
+
+    & c_serviceSouscrit : ( 0 .. maxProc * ( 0 .. maxServ ) ) +-> 0 .. 1
+    & serviceSouscrit = dom ( c_serviceSouscrit |> { 1 } )
+
+
+INITIALISATION
+    /*Initialisation des variables concrètes => les petits ensembles ne contiennent aucun élément*/
+    c_processus := ( 0 .. maxProc ) * { ko } ;
+    c_service := ( 0 .. maxServ ) * { ko } ;
+    c_nom := ( 0 .. maxNom ) * { ko } ;
+    c_profil := ( 0 .. maxProfil ) * { ko } ;
+
+    /*Les relations et fonctions*/
+    c_serviceUtilise := ( 0 .. maxProc * ( 0 .. maxServ ) ) * { 0 } ;
+    c_leNom := ( 0 .. maxServ ) * { 0 } ;
+    c_leProfil := ( 0 .. maxProc * ( 0 .. maxProfil ) ) * { 0 } ;
+    c_leProfilAutorise := ( 0 .. maxServ * ( 0 .. maxNom ) ) * { 0 } ;
+    c_lEtat := ( 0 .. maxServ ) * { inactif } ;
+    c_leTypeDeService := ( 0 .. maxServ ) * { nonExclusif } ;
+    c_serviceSouscrit := ( 0 .. maxProc * ( 0 .. maxServ ) ) * { 0 } ;
+
+END

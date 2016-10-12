@@ -1,23 +1,26 @@
 ﻿THEORY BalanceX IS
-  SystemeDeServiceOS_i,3,2,0,1,0,0,0;
-  ValuesLemmas,3,2,0,1,0,0,0
+  SystemeDeServiceOS_i,4,2,0,2,0,0,0;
+  ValuesLemmas,4,2,0,2,0,0,0
 END
 &
 THEORY ProofState IS
   Proved(Util);
   Proved(Util);
+  Proved(0);
   Proved(0)
 END
 &
 THEORY MethodList IS
-  ss & pr;
-  ss & pr;
+  ss & mp;
+  ss & mp;
+  pr;
   pr
 END
 &
 THEORY PassList IS
   Force(0),(?;0);
-  Force(1),(?;0);
+  Force(0),(?;0);
+  Force(0),?;
   Force(0),?
 END
 &

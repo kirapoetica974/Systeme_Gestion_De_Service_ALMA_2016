@@ -6,10 +6,16 @@
 IMPLEMENTATION SystemeDeServiceOS_i
 REFINES SystemeDeServiceOS
 
+DEFINITIONS
+    PROCESSUS == 0..maxProc
+    ; SERVICE == 0..maxServ
+    ; NOM == 0..maxNom
+    ; PROFIL == 0..maxProfil
+    
 VALUES
-    SERVICE = 0..50 ;
-    NOM = 0..30 ;
-    PROFIL = 0..30 ;
-    PROCESSUS = 0..30 
+    maxProc = 30;
+    maxServ = 30;
+    maxNom = 30;
+    maxProfil = 30
 
 END
