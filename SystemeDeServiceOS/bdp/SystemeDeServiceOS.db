@@ -10,6 +10,9 @@
         <component_file path="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS" name="SystemeDeServiceFonctions" suffix="mch" user="rachelle">
             <component name="SystemeDeServiceFonctions" type="specification" />
         </component_file>
+        <component_file path="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS" name="SystemeDeServiceFonctions_i" suffix="imp" user="rachelle">
+            <component name="SystemeDeServiceFonctions_i" type="implementation" />
+        </component_file>
         <component_file path="/home/rachelle/Documents/M2ALMA/AtelierB/Systeme_Gestion_De_Service_ALMA_2016/SystemeDeServiceOS" name="SystemeDeServiceOS" suffix="mch" user="rachelle">
             <component name="SystemeDeServiceOS" type="specification" />
         </component_file>

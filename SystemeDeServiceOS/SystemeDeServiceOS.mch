@@ -11,5 +11,8 @@ SETS
     NOM ;
     PROFIL ;
     ETAT = {actif, inactif} ;
-    TYPESERVICE = {exclusif, nonExclusif}  
+    TYPESERVICE = {exclusif, nonExclusif} 
+    
+DEFINITIONS
+    
 END
