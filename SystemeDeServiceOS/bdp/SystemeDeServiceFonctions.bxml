@@ -1,0 +1,309 @@
+<Machine name='SystemeDeServiceFonctions' type='abstraction'>
+<Sees>
+<Referenced_Machine>
+<Name>SystemeDeServiceOS</Name>
+</Referenced_Machine>
+</Sees>
+<Abstract_Variables>
+<Id value='processus' typref='3569248008'/>
+<Id value='service' typref='2113264464'/>
+<Id value='nom' typref='2466216583'/>
+<Id value='profil' typref='2063181425'/>
+<Id value='serviceUtilise' typref='4031867510'/>
+<Id value='leNom' typref='395964917'/>
+<Id value='leProfil' typref='3576112639'/>
+<Id value='leProfilAutorise' typref='3576112639'/>
+<Id value='lEtat' typref='2854939941'/>
+<Id value='leTypeDeService' typref='1804948036'/>
+<Id value='serviceSouscrit' typref='4031867510'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='&lt;:'>
+<Id value='processus' typref='3569248008'/>
+<Id value='PROCESSUS' typref='3569248008'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='service' typref='2113264464'/>
+<Id value='SERVICE' typref='2113264464'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='nom' typref='2466216583'/>
+<Id value='NOM' typref='2466216583'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;:'>
+<Id value='profil' typref='2063181425'/>
+<Id value='PROFIL' typref='2063181425'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='serviceUtilise' typref='4031867510'/>
+<Binary_Exp op='&lt;-&gt;' typref='1903705485'>
+<Id value='processus' typref='3569248008'/>
+<Id value='service' typref='2113264464'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='leNom' typref='395964917'/>
+<Binary_Exp op='+-&gt;' typref='1977414222'>
+<Id value='service' typref='2113264464'/>
+<Id value='nom' typref='2466216583'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='leProfil' typref='3576112639'/>
+<Binary_Exp op='+-&gt;' typref='1074222490'>
+<Id value='service' typref='2113264464'/>
+<Id value='profil' typref='2063181425'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='leProfilAutorise' typref='3576112639'/>
+<Binary_Exp op='&lt;-&gt;' typref='1074222490'>
+<Id value='service' typref='2113264464'/>
+<Id value='profil' typref='2063181425'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='lEtat' typref='2854939941'/>
+<Binary_Exp op='+-&gt;' typref='1744519028'>
+<Id value='service' typref='2113264464'/>
+<Id value='ETAT' typref='2539719319'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='leTypeDeService' typref='1804948036'/>
+<Binary_Exp op='+-&gt;' typref='3606595775'>
+<Id value='service' typref='2113264464'/>
+<Id value='TYPESERVICE' typref='2200518486'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='serviceSouscrit' typref='4031867510'/>
+<Binary_Exp op='&lt;-&gt;' typref='1903705485'>
+<Id value='processus' typref='3569248008'/>
+<Id value='service' typref='2113264464'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='processus' typref='3569248008'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='service' typref='2113264464'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='nom' typref='2466216583'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='profil' typref='2063181425'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='serviceUtilise' typref='4031867510'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='leNom' typref='395964917'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='leProfil' typref='3576112639'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='leProfilAutorise' typref='3576112639'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='lEtat' typref='2854939941'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='leTypeDeService' typref='1804948036'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='serviceSouscrit' typref='4031867510'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<TypeInfos>
+<Type id='3569248008'>
+<Unary_Exp op='POW'>
+<Id value='PROCESSUS'/>
+</Unary_Exp>
+</Type>
+<Type id='2113264464'>
+<Unary_Exp op='POW'>
+<Id value='SERVICE'/>
+</Unary_Exp>
+</Type>
+<Type id='2466216583'>
+<Unary_Exp op='POW'>
+<Id value='NOM'/>
+</Unary_Exp>
+</Type>
+<Type id='2063181425'>
+<Unary_Exp op='POW'>
+<Id value='PROFIL'/>
+</Unary_Exp>
+</Type>
+<Type id='4031867510'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PROCESSUS'/>
+<Id value='SERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='395964917'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='NOM'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3576112639'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='PROFIL'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2854939941'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='ETAT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1804948036'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='TYPESERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1903705485'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='PROCESSUS'/>
+<Id value='SERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1977414222'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='NOM'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1074222490'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='PROFIL'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1744519028'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='ETAT'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2539719319'>
+<Unary_Exp op='POW'>
+<Id value='ETAT'/>
+</Unary_Exp>
+</Type>
+<Type id='3606595775'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SERVICE'/>
+<Id value='TYPESERVICE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2200518486'>
+<Unary_Exp op='POW'>
+<Id value='TYPESERVICE'/>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>
